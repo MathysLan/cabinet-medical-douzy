@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ActualiteController extends AbstractController
 {
-    #[Route('/actualites', name: 'actualites')]
+    #[Route('/actualites', name: 'app_actualites')]
     public function index(EntityManagerInterface $em): Response
     {
         $actualites = $em->getRepository(Actualite::class)->findBy([], ['datePublication' => 'DESC']);
@@ -35,7 +35,7 @@ class ActualiteController extends AbstractController
             $em->persist($actualite);
             $em->flush();
 
-            return $this->redirectToRoute('actualites');
+            return $this->redirectToRoute('app_actualites');
         }
 
         return $this->render('actualite/ajouter.html.twig', [
