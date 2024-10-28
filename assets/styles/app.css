@@ -86,6 +86,30 @@ h2 {
     display: block;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(128, 128, 128, 0.3); /* Gris léger et transparent */
+    border-radius: 50%; /* Pour arrondir les icônes */
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(128, 128, 128, 0.4); /* Un gris un peu plus prononcé au survol */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: brightness(0.9); /* Légère atténuation pour rendre les boutons un peu plus discrets */
+    opacity: 0.8; /* Transparence pour voir à travers */
+    transition: opacity 0.3s ease; /* Douce transition pour le hover */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Pleine opacité au survol */
+}
 
 
 /* Styles des sections de services */
