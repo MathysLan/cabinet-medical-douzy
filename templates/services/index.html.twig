@@ -4,15 +4,65 @@
 
 {% block body %}
     <div class="container mt-5">
-        <h1>Nos Services</h1>
-        <h2>Professionnels de santé disponibles :</h2>
-        <ul>
-            <li><a href="{{ path('app_services_medecin') }}">5 Médecins</a></li>
-            <li><a href="{{ path('app_services_infirmiere') }}">2 Infirmières</a></li>
-            <li><a href="{{ path('app_services_orthophoniste') }}">3 Orthophonistes</a></li>
-            <li><a href="{{ path('app_services_psychologue') }}">1 Psychologue</a></li>
-            <li><a href="{{ path('app_services_dentiste') }}">1 Dentiste</a></li>
-        </ul>
-        <p>N'hésitez pas à prendre rendez-vous avec nos professionnels pour toute consultation.</p>
+        <h1 class="text-center mb-4">Nos Services</h1>
+        <h2 class="text-center mb-4">Professionnels de santé disponibles :</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>5 Médecins</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Consultez nos médecins généralistes pour des soins adaptés à toute la famille.</p>
+                        <a href="{{ path('app_services_medecin') }}" class="btn btn-primary">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>2 Infirmières</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Bénéficiez des soins infirmiers pour le suivi médical et les soins à domicile.</p>
+                        <a href="{{ path('app_services_infirmiere') }}" class="btn btn-primary">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>3 Orthophonistes</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Nos orthophonistes vous accompagnent pour les troubles de la communication.</p>
+                        <a href="{{ path('app_services_orthophoniste') }}" class="btn btn-primary">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>1 Psychologue</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Profitez d'un soutien psychologique avec notre psychologue qualifié.</p>
+                        <a href="{{ path('app_services_psychologue') }}" class="btn btn-primary">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>1 Dentiste</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Prenez soin de votre santé bucco-dentaire avec notre dentiste expérimenté.</p>
+                        <a href="{{ path('app_services_dentiste') }}" class="btn btn-primary">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4">N'hésitez pas à prendre rendez-vous avec nos professionnels pour toute consultation.</p>
     </div>
 {% endblock %}
