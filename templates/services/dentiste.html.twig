@@ -1,11 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Psychologue{% endblock %}
+{% block title %}Notre Dentiste{% endblock %}
 
 {% block body %}
     <div class="container mt-5">
-        <h1>Notre Dentiste</h1>
-        <p>Notre Dentiste est disponible pour vous aider et soigner vos dents.</p>
-        <!-- Détails supplémentaires -->
+        <h1 class="text-center mb-4">Notre Dentiste</h1>
+        <p class="text-center mb-4">Notre dentiste est disponible pour vous aider et soigner vos dents :</p>
+        <div class="card mx-auto" style="width: 50%;">
+            <div class="card-header text-center">
+                <h5>Dentiste</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Avec une expertise reconnue, notre dentiste propose des soins complets pour la santé bucco-dentaire. Que ce soit pour des consultations de routine, des soins conservateurs ou des interventions esthétiques, il est là pour vous offrir des traitements personnalisés adaptés à vos besoins.</p>
+            </div>
+        </div>
+        <p class="text-center mt-4">N'hésitez pas à prendre rendez-vous pour toute consultation.</p>
     </div>
 {% endblock %}
