@@ -30,6 +30,8 @@ class ActualiteController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+           $actualite->setDatePublication(new \DateTime());
+
             $em->persist($actualite);
             $em->flush();
 

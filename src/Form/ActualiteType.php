@@ -17,7 +17,6 @@ class ActualiteType extends AbstractType
         $builder
             ->add('titre', TextType::class)
             ->add('contenu', TextareaType::class)
-            ->add('datePublication', DateTimeType::class)
         ;
     }
 
