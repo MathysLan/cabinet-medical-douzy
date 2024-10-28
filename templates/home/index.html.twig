@@ -11,24 +11,40 @@
         </header>
 
         <section class="mb-5">
-            <h2>Nos Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>Médecins</h3>
-                    <p>Consultez nos médecins généralistes et spécialistes.</p>
-                    <a href="{{ path('app_services_medecin') }}" class="btn btn-primary">En savoir plus</a>
-                </div>
-                <div class="col-md-4">
-                    <h3>Infirmières</h3>
-                    <p>Soins et accompagnement par nos infirmières qualifiées.</p>
-                    <a href="{{ path('app_services_infirmiere') }}" class="btn btn-primary">En savoir plus</a>
-                </div>
-                <div class="col-md-4">
-                    <h3>Orthophonistes</h3>
-                    <p>Thérapies et suivi personnalisé pour tous les âges.</p>
-                    <a href="{{ path('app_services_orthophoniste') }}" class="btn btn-primary">En savoir plus</a>
+            <div class="services-container">
+                <a href="{{ path('app_services') }}"><h2 class="services-title">Nos Services</h2></a>
+                <div class="row">
+                    <div class="col-md-4 service-col">
+                        <div class="card service-card">
+                            <img src="{{ asset('images/service1.jpg') }}" class="card-img-top" alt="Service 1">
+                            <div class="card-body">
+                                <h5 class="card-title service-card-title">Médecin Généraliste</h5>
+                                <p class="card-text service-card-text">Consultations générales pour toute la famille.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 service-col">
+                        <div class="card service-card">
+                            <img src="{{ asset('images/service2.jpg') }}" class="card-img-top" alt="Service 2">
+                            <div class="card-body">
+                                <h5 class="card-title service-card-title">Orthophonie</h5>
+                                <p class="card-text service-card-text">Suivi et accompagnement des troubles de la communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 service-col">
+                        <div class="card service-card">
+                            <img src="{{ asset('images/service3.jpg') }}" class="card-img-top" alt="Service 3">
+                            <div class="card-body">
+                                <h5 class="card-title service-card-title">Psychologie</h5>
+                                <p class="card-text service-card-text">Consultations pour le soutien psychologique et émotionnel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ajoute d'autres services ici -->
                 </div>
             </div>
+
         </section>
 
         <section class="mb-5">
