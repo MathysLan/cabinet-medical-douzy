@@ -1,3 +1,61 @@
+/* app.css */
+
+/* Styles globaux */
 body {
-    background-color: skyblue;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Couleur de fond douce */
+    color: #333; /* Couleur de texte standard */
+}
+
+header {
+    background-color: #007bff; /* Couleur de fond de la bannière */
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header img {
+    max-width: 100%; /* Rend l'image responsive */
+    height: auto;
+    border-radius: 8px; /* Bords arrondis pour l'image */
+}
+
+h2 {
+    margin-top: 30px;
+    color: #007bff; /* Couleur des sous-titres */
+}
+
+footer {
+    background-color: #343a40; /* Couleur de fond du footer */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+/* Styles des sections de services */
+section {
+    background-color: white; /* Fond blanc pour les sections */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Couleur primaire */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+.list-unstyled li {
+    margin-bottom: 15px; /* Espacement entre les articles */
+    padding: 10px;
+    border: 1px solid #eaeaea; /* Bordure légère autour des articles */
+    border-radius: 5px; /* Bords arrondis pour les articles */
+    background-color: #f9f9f9; /* Fond léger pour les articles */
 }
