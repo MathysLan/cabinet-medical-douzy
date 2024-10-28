@@ -5,13 +5,14 @@
 {% block body %}
     <div class="container mt-5">
         <h1>Nos Services</h1>
+        <h2>Professionnels de santé disponibles :</h2>
         <ul>
-            <li>Médecin généraliste</li>
-            <li>Orthophoniste</li>
-            <li>Cardiologue</li>
-            <li>Pédiatre</li>
-            <!-- Ajoute d'autres services selon tes besoins -->
+            <li><a href="{{ path('app_services_medecin') }}">5 Médecins</a></li>
+            <li><a href="{{ path('app_services_infirmiere') }}">2 Infirmières</a></li>
+            <li><a href="{{ path('app_services_orthophoniste') }}">3 Orthophonistes</a></li>
+            <li><a href="{{ path('app_services_psychologue') }}">1 Psychologue</a></li>
+            <li><a href="{{ path('app_services_dentiste') }}">1 Dentiste</a></li>
         </ul>
+        <p>N'hésitez pas à prendre rendez-vous avec nos professionnels pour toute consultation.</p>
     </div>
 {% endblock %}
-
