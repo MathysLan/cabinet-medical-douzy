@@ -26,13 +26,67 @@ h2 {
     color: #007bff; /* Couleur des sous-titres */
 }
 
-footer {
-    background-color: #343a40; /* Couleur de fond du footer */
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 40px;
+.footer {
+    background-color: #007bff; /* Couleur de fond du footer */
+    color: #ffffff; /* Couleur du texte */
+    padding: 40px 20px; /* Espacement supérieur et inférieur, et padding latéral */
+    width: 100%; /* S'assurer que le footer s'étend sur toute la largeur */
+    position: relative; /* Permet d'ajuster le positionnement si nécessaire */
+    clear: both; /* Assure que le footer se place correctement après d'autres éléments */
 }
+
+/* Autres styles... */
+
+.footer h5 {
+    font-size: 1.25rem; /* Taille de police pour les titres */
+    font-weight: bold; /* Met en gras les titres */
+    margin-bottom: 15px; /* Espace sous les titres */
+}
+
+.footer p {
+    margin-bottom: 10px; /* Espace sous les paragraphes */
+}
+
+.footer a {
+    color: #ffffff; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    transition: color 0.3s ease; /* Transition pour l'effet au survol */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Sous-ligne au survol */
+    color: #d4d4d4; /* Couleur des liens au survol */
+}
+
+.footer .list-unstyled {
+    padding-left: 0; /* Supprime le remplissage à gauche des listes */
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 5px; /* Espace entre les éléments de liste */
+    background: #554B39;
+}
+
+.footer .text-center {
+    margin-top: 20px; /* Espace au-dessus du texte centré */
+}
+
+.footer .text-center p {
+    margin-bottom: 0; /* Supprime la marge inférieure pour le texte centré */
+}
+
+/* Ajoute une bordure supérieure pour plus de style */
+.footer .row {
+    border-top: 2px solid #ffffff; /* Bordure blanche en haut */
+    padding-top: 20px; /* Espace entre la bordure et le contenu */
+}
+
+.footer .col-md-4 {
+    margin-bottom: 20px; /* Espace entre les colonnes */
+    display: block;
+}
+
+
 
 /* Styles des sections de services */
 section {
@@ -89,6 +143,23 @@ section {
 .col-md-4 {
     display: flex;
     justify-content: center; /* Centrer les cartes */
+}
+
+/* Enlève le soulignement des liens dans les cartes de services */
+.service-col .service-card a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease; /* Ajoute une transition douce pour la couleur */
+}
+
+/* Ajoute un effet de survol */
+.service-col .service-card a:hover {
+    color: #007bff; /* Change la couleur du texte lors du survol */
+}
+
+/* Assurez-vous que cela n'entre pas en conflit avec Bootstrap */
+a {
+    text-decoration: none; /* Enlève le soulignement de tous les liens */
 }
 
 

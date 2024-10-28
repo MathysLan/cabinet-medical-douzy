@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Bienvenue au Cabinet Médical de Douzy{% endblock %}
-
 {% block body %}
     <div class="container mt-5">
         <header class="text-center mb-4">
@@ -11,40 +10,78 @@
         </header>
 
         <section class="mb-5">
-            <div class="services-container">
-                <a href="{{ path('app_services') }}"><h2 class="services-title">Nos Services</h2></a>
-                <div class="row">
-                    <div class="col-md-4 service-col">
-                        <div class="card service-card">
-                            <img src="{{ asset('images/service1.jpg') }}" class="card-img-top" alt="Service 1">
-                            <div class="card-body">
-                                <h5 class="card-title service-card-title">Médecin Généraliste</h5>
-                                <p class="card-text service-card-text">Consultations générales pour toute la famille.</p>
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="{{ asset('images/service1.jpg') }}" class="card-img-top" alt="Médecin Généraliste">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Médecin Généraliste</h5>
+                                        <p class="card-text">Consultations générales pour toute la famille.</p>
+                                        <a href="{{ path('app_services_medecin') }}" class="btn btn-primary">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="{{ asset('images/service2.jpg') }}" class="card-img-top" alt="Orthophonie">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Orthophonie</h5>
+                                        <p class="card-text">Suivi et accompagnement des troubles de la communication.</p>
+                                        <a href="{{ path('app_services_orthophoniste') }}" class="btn btn-primary">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="{{ asset('images/service3.jpg') }}" class="card-img-top" alt="Psychologie">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Psychologie</h5>
+                                        <p class="card-text">Consultations pour le soutien psychologique et émotionnel.</p>
+                                        <a href="{{ path('app_services_psychologue') }}" class="btn btn-primary">En savoir plus</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 service-col">
-                        <div class="card service-card">
-                            <img src="{{ asset('images/service2.jpg') }}" class="card-img-top" alt="Service 2">
-                            <div class="card-body">
-                                <h5 class="card-title service-card-title">Orthophonie</h5>
-                                <p class="card-text service-card-text">Suivi et accompagnement des troubles de la communication.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 service-col">
-                        <div class="card service-card">
-                            <img src="{{ asset('images/service3.jpg') }}" class="card-img-top" alt="Service 3">
-                            <div class="card-body">
-                                <h5 class="card-title service-card-title">Psychologie</h5>
-                                <p class="card-text service-card-text">Consultations pour le soutien psychologique et émotionnel.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ajoute d'autres services ici -->
-                </div>
-            </div>
 
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="{{ asset('images/service4.jpg') }}" class="card-img-top" alt="Infirmière">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Infirmière</h5>
+                                        <p class="card-text">Soins médicaux.</p>
+                                        <a href="{{ path('app_services_infirmiere') }}" class="btn btn-primary">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="{{ asset('images/service5.jpg') }}" class="card-img-top" alt="Dentiste">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dentiste</h5>
+                                        <p class="card-text">Soins bucco-dentaires.</p>
+                                        <a href="{{ path('app_services_dentiste') }}" class="btn btn-primary">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
         </section>
 
         <section class="mb-5">
@@ -55,15 +92,47 @@
                         <h3>{{ actualite.titre }}</h3>
                         <p>{{ actualite.contenu|slice(0, 100) ~ '...' }}</p>
                         <small>Publié le {{ actualite.datePublication|date('d/m/Y H:i') }}</small>
-                        <a href="{{ path('actualites') }}" class="btn btn-secondary">Lire plus</a>
+                        <a href="{{ path('app_actualites') }}" class="btn btn-secondary">Lire plus</a>
                     </li>
                 {% endfor %}
             </ul>
         </section>
-
-        <footer class="text-center mt-5">
-            <h2>Contact</h2>
-            <p>Pour toute demande, veuillez nous contacter au <strong>01 23 45 67 89</strong> ou par email à <strong>contact@cabinetsante.com</strong>.</p>
-        </footer>
     </div>
+    <footer class="footer text-dark mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contactez-nous</h5>
+                    <p>
+                        Pour toute demande, veuillez nous contacter :
+                    </p>
+                    <p>
+                        <strong>Téléphone :</strong> <a href="tel:+0123456789">01 23 45 67 89</a><br>
+                        <strong>Email :</strong> <a href="mailto:contact@cabinetsante.com">contact@cabinetsante.com</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Nos Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ path('app_services_medecin') }}">Médecins Généralistes</a></li>
+                        <li><a href="{{ path('app_services_orthophoniste') }}">Orthophonistes</a></li>
+                        <li><a href="{{ path('app_services_infirmiere') }}">Infirmières</a></li>
+                        <li><a href="{{ path('app_services_psychologue') }}">Psychologue</a></li>
+                        <li><a href="{{ path('app_services_dentiste') }}">Dentiste</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens Utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ path('app_actualites') }}">Actualités</a></li>
+                        <li><a href="{{ path('app_contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; {{ 'now'|date('Y') }} Cabinet Médical de Douzy. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
 {% endblock %}
