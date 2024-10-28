@@ -1,8 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Bienvenue au Cabinet Médical de Douzy{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue au cabinet médical de Douzy</h1>
-    <p>Nous sommes ravis de vous accueillir. Vous pouvez prendre rendez-vous avec nos médecins via notre plateforme en ligne.</p>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Bienvenue au Cabinet Médical de Douzy</h1>
+            <p>Votre santé est notre priorité.</p>
+            <img src="{{ asset('images/banner.jpg') }}" alt="Bannière du cabinet médical" class="img-fluid">
+        </header>
+
+        <section class="mb-5">
+            <h2>Nos Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Médecins</h3>
+                    <p>Consultez nos médecins généralistes et spécialistes.</p>
+                    <a href="{{ path('app_services_medecin') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Infirmières</h3>
+                    <p>Soins et accompagnement par nos infirmières qualifiées.</p>
+                    <a href="{{ path('app_services_infirmiere') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Orthophonistes</h3>
+                    <p>Thérapies et suivi personnalisé pour tous les âges.</p>
+                    <a href="{{ path('app_services_orthophoniste') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Dernières Actualités</h2>
+            <ul class="list-unstyled">
+                {% for actualite in actualites %}
+                    <li>
+                        <h3>{{ actualite.titre }}</h3>
+                        <p>{{ actualite.contenu|slice(0, 100) ~ '...' }}</p>
+                        <small>Publié le {{ actualite.datePublication|date('d/m/Y H:i') }}</small>
+                        <a href="{{ path('actualites') }}" class="btn btn-secondary">Lire plus</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <footer class="text-center mt-5">
+            <h2>Contact</h2>
+            <p>Pour toute demande, veuillez nous contacter au <strong>01 23 45 67 89</strong> ou par email à <strong>contact@cabinetsante.com</strong>.</p>
+        </footer>
+    </div>
 {% endblock %}
