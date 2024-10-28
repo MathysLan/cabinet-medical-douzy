@@ -1,11 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Orthophonistes{% endblock %}
+{% block title %}Nos Orthophonistes{% endblock %}
 
 {% block body %}
     <div class="container mt-5">
-        <h1>Nos Orthophonistes</h1>
-        <p>Nos 3 orthophonistes sont disponibles pour aider avec des troubles de la communication et du langage.</p>
-        <!-- Détails supplémentaires -->
+        <h1 class="text-center mb-4">Nos Orthophonistes</h1>
+        <p class="text-center mb-4">Nos 3 orthophonistes sont disponibles pour aider avec des troubles de la communication et du langage :</p>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>Orthophoniste 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Spécialisée dans les troubles du langage écrit et oral, elle aide les enfants à développer leurs compétences linguistiques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>Orthophoniste 2</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Elle se concentre sur la rééducation des troubles de la parole et aide les patients à retrouver leur confiance en s'exprimant.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>Orthophoniste 3</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Experte dans l'accompagnement des enfants ayant des troubles spécifiques du langage, elle utilise des méthodes ludiques pour favoriser l'apprentissage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4">N'hésitez pas à prendre rendez-vous avec nos orthophonistes pour toute consultation.</p>
     </div>
 {% endblock %}
