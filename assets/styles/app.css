@@ -59,3 +59,36 @@ section {
     border-radius: 5px; /* Bords arrondis pour les articles */
     background-color: #f9f9f9; /* Fond léger pour les articles */
 }
+
+/* Styles pour la page des médecins */
+.container {
+    padding: 20px; /* Ajoute un espacement autour du contenu */
+}
+
+.card {
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.card img {
+    border-radius: 8px 8px 0 0; /* Arrondir le haut de l'image */
+    height: 200px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Couvrir l'espace sans déformer l'image */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Taille de la police pour le nom du médecin */
+}
+
+.card-text {
+    font-size: 1rem; /* Taille de la police pour la description */
+}
+
+/* Marges pour les colonnes */
+.col-md-4 {
+    display: flex;
+    justify-content: center; /* Centrer les cartes */
+}
+
+
